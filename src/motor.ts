@@ -110,7 +110,7 @@ export const checkearPartida = () => {
     gameOver();
   }
 };
+
 export const iniciarPartida = () => {
-  nuevaPartida()
- 
-}
+  nuevaPartida();
+};

@@ -1,15 +1,4 @@
 import { partida } from "./modelo";
-import {
-  obtenerNumeroAleatorio,
-  obtenerNumeroCarta,
-  obtenerValorCarta,
-  sumarPuntos,
-  asignarNuevosPuntos,
-  obtenerUrlImagen,
-  checkearPartida,
-} from "./motor";
-import { pintarUrlImagen, deshabilitarBotonYsi } from "./ui";
-
 //función para mostrar la puntuacion
 export const mostrarPuntuacion = () => {
   const puntuacion = document.querySelector(".puntuacion");
@@ -19,7 +8,6 @@ export const mostrarPuntuacion = () => {
   deshabilitarBotonYsi(true);
 };
 document.addEventListener("DOMContentLoaded", mostrarPuntuacion);
-
 // pedir carta
 export const pideCarta = (): void => {
   const numeroAleatorio = obtenerNumeroAleatorio();
@@ -32,3 +20,17 @@ export const pideCarta = (): void => {
   checkearPartida();
   mostrarPuntuacion();
 };
+import {
+  obtenerNumeroAleatorio,
+  obtenerNumeroCarta,
+  obtenerValorCarta,
+  sumarPuntos,
+  asignarNuevosPuntos,
+  obtenerUrlImagen,
+  checkearPartida,
+} from "./motor";
+import { pintarUrlImagen, deshabilitarBotonYsi } from "./ui";
+
+
+
+

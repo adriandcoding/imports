@@ -1,5 +1,5 @@
 import { partida } from "./modelo";
-import { deshabilitarBotonPedirCarta } from "./ui";
+import { deshabilitarBotonPedirCarta, nuevaPartida } from "./ui";
 
 //función para generar carta aleatoria
 export const obtenerNumeroAleatorio = (): number => {
@@ -110,3 +110,7 @@ export const checkearPartida = () => {
     gameOver();
   }
 };
+export const iniciarPartida = () => {
+  nuevaPartida()
+ 
+}

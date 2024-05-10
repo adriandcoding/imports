@@ -1,6 +1,15 @@
 import { partida } from "./modelo";
-import { valorar } from "./motor";
-import { pideCarta, mostrarPuntuacion } from "./main";
+import {
+  valorar,
+  obtenerNumeroAleatorio,
+  obtenerNumeroCarta,
+  obtenerValorCarta,
+  sumarPuntos,
+  asignarNuevosPuntos,
+  obtenerUrlImagen,
+  checkearPartida,
+} from "./motor";
+import { mostrarPuntuacion } from "./main";
 // para pintar el url de cada carta
 export const pintarUrlImagen = (urlCarta: string): void => {
   const cartaMostrada = document.querySelector(".cardfront");
@@ -8,6 +17,18 @@ export const pintarUrlImagen = (urlCarta: string): void => {
   if (cartaMostrada && cartaMostrada instanceof HTMLImageElement) {
     cartaMostrada.src = urlCarta;
   }
+};
+// pedir carta
+export const pideCarta = (): void => {
+  const numeroAleatorio = obtenerNumeroAleatorio();
+  const carta = obtenerNumeroCarta(numeroAleatorio);
+  const urlCarta = obtenerUrlImagen(carta);
+  pintarUrlImagen(urlCarta);
+  const puntos = obtenerValorCarta(carta);
+  const puntosSumados = sumarPuntos(puntos);
+  asignarNuevosPuntos(puntosSumados);
+  checkearPartida();
+  mostrarPuntuacion();
 };
 //capturando el botón de pedir carta y agregando funcionalidad
 export const pedirCarta = document.querySelector(".pedir-carta");

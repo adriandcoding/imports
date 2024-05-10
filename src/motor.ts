@@ -1,5 +1,6 @@
 import { partida } from "./modelo";
 import { deshabilitarBotonPedirCarta } from "./ui";
+
 //función para generar carta aleatoria
 export const obtenerNumeroAleatorio = (): number => {
   return Math.floor(Math.random() * 10) + 1;

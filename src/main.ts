@@ -6,13 +6,9 @@ import {
   sumarPuntos,
   asignarNuevosPuntos,
   obtenerUrlImagen,
-  
   checkearPartida,
 } from "./motor";
-import {
-  pintarUrlImagen,
-deshabilitarBotonYsi
-} from "./ui";
+import { pintarUrlImagen, deshabilitarBotonYsi } from "./ui";
 
 //función para mostrar la puntuacion
 export const mostrarPuntuacion = () => {

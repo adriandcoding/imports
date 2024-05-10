@@ -9,7 +9,14 @@ import {
   obtenerUrlImagen,
   checkearPartida,
 } from "./motor";
-import { mostrarPuntuacion } from "./main";
+//función para mostrar la puntuacion
+export const mostrarPuntuacion = () => {
+  const puntuacion = document.querySelector(".puntuacion");
+  if (puntuacion && puntuacion instanceof HTMLParagraphElement) {
+    puntuacion.innerHTML = partida.puntosTotales.toString();
+  }
+  deshabilitarBotonYsi(true);
+};
 // para pintar el url de cada carta
 export const pintarUrlImagen = (urlCarta: string): void => {
   const cartaMostrada = document.querySelector(".cardfront");
